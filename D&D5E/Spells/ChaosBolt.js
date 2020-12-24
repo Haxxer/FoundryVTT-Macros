@@ -64,7 +64,7 @@ class ChaosBolt{
 
 		let attack_roll = await this.item.rollAttack({event: this.event});
 
-		this.target = this.first_target === null ? (Array.from(game.user.targets).length > 0 ? [Array.from(game.user.targets)[0]] : []) : (Array.isArray(this.first_target) ? [this.first_target[0]]) : this.first_target;
+		this.target = this.first_target === null ? (Array.from(game.user.targets).length > 0 ? [Array.from(game.user.targets)[0]] : []) : (Array.isArray(this.first_target) ? [this.first_target[0]] : this.first_target);
 
 		if(!attack_roll){
 			this.post_cast();
